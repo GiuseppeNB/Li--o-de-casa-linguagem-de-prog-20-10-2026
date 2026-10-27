@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Meu Sistema</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="pagina-login">
+        <section class="cartao-login">
+
+            <div class="logo">MS</div>
+
+            <h1>Bem-vindo!</h1>
+            <p class="descricao">
+                Entre com seus dados para continuar.
+            </p>
+
+            <form id="form-login" method="post">
+
+                <div class="campo">
+                    <label for="usuario">Usuário</label>
+                    <input
+                        type="text"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Digite seu usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button onclick="entrar()"
+                    type="button"
+                    id="btn-entrar"
+                    class="botao botao-principal"
+                >
+                    Entrar
+                </button>
+
+            </form>
+
+            <div class="divisor">
+                <span>ou</span>
+            </div>
+
+            <a
+                href="#modal-cadastro"
+                class="botao botao-secundario"
+            >
+                Criar uma conta
+            </a>
+
+            <p class="rodape-login">
+                Acesse sua conta ou cadastre-se para começar.
+            </p>
+
+        </section>
+    </main>
+
+    <!-- Modal de cadastro -->
+    <div class="modal" id="modal-cadastro">
+
+        <a
+            href="#"
+            class="modal-fundo"
+            aria-label="Fechar cadastro"
+        ></a>
+
+        <section
+            class="modal-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="titulo-cadastro"
+        >
+
+            <a
+                href="#"
+                class="modal-fechar"
+                aria-label="Fechar modal"
+            >&times;</a>
+
+            <h2 id="titulo-cadastro">Criar uma conta</h2>
+
+            <p class="descricao">
+                Preencha seus dados para se cadastrar.
+            </p>
+
+            <form id="form-cadastro" method="post">
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Digite seu e-mail"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="novo-usuario">Nome de usuário</label>
+                    <input
+                        type="text"
+                        id="novo-usuario"
+                        name="novo-usuario"
+                        placeholder="Crie um nome de usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="nova-senha">Senha</label>
+                    <input
+                        type="password"
+                        id="nova-senha"
+                        name="nova-senha"
+                        placeholder="Crie uma senha"
+                        autocomplete="new-password"
+                        required
+                    >
+                </div>
+
+                <button onclick="cadastrarUsuario()"
+                    type="button"
+                    id="btn-cadastrar"
+                    class="botao botao-principal"
+                >
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <p class="texto-modal">
+                Já possui uma conta?
+                <a href="#">Voltar ao login</a>
+            </p>
+
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
